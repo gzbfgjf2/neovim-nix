@@ -168,7 +168,7 @@ vim.api.nvim_create_autocmd("FileType", {
   command = "setlocal spell",
 })
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = { "lua" },
+  pattern = { "lua", "nix" },
   command = "setlocal ts=2 sts=2 sw=2 expandtab textwidth=79",
 })
 -- vim.api.nvim_create_autocmd("FileType", {

@@ -4,12 +4,14 @@ require("noice").setup({
     opts = {
       border = { style = "none", padding = { 0, 0 }, },
       position = {
-        row = "0",
-        col = "50%",
+        -- row = "0",
+        -- col = "50%",
+        row = "100%",
       },
       size = {
-        min_width = 80,
-        width = 0.5,
+        -- min_width = 80,
+        -- width = 0.5,
+        width = "100%",
         height = "auto",
       },
 

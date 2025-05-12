@@ -26,17 +26,19 @@ require("snacks").setup({
       border = "none",
       -- title_pos = "center",
       height = 1,
-      width = function()
-        return math.max(math.floor(vim.o.columns * 0.5), 80)
-      end,
+      -- width = function()
+      --   return math.max(math.floor(vim.o.columns * 0.5), 80)
+      -- end,
+      width = function() return vim.o.columns end,
       -- min_width = 80,
+      -- row = 0,
+      row = 10000,
+      -- row = -3,
+      -- col = "50%",
+      -- col = 0,
       -- relative = "editor",
       -- noautocmd = true,
-      row = 0,
-      -- col = "50%",
       -- relative = "cursor",
-      -- row = -3,
-      -- col = 0,
       wo = {
         winhighlight =
         "NormalFloat:NormalFloat,FloatBorder:SnacksInputBorder,FloatTitle:SnacksInputTitle",
@@ -97,21 +99,36 @@ require("snacks").setup({
       --   },
       -- },
       preview = false,
+      -- layout = {
+      --   backdrop = false,
+      --   width = 0.5,
+      --   min_width = 80,
+      --   height = 0.4,
+      --   min_height = 3,
+      --   box = "vertical",
+      --   -- border = "rounded",
+      --   posiiton = "top",
+      --   row = 0,
+      --   -- title = "{title}",
+      --   -- title_pos = "center",
+      --   { win = "input", height = 1, border = "none" },
+      --   { win = "list", border = "none" },
+      --   { win = "preview", title = "{preview}", height = 0.4, border = "none" },
+      -- }
       layout = {
         backdrop = false,
-        width = 0.5,
-        min_width = 80,
+        width = 0,
+        -- min_width = 80,
         height = 0.4,
-        min_height = 3,
+        -- min_height = 3,
         box = "vertical",
         -- border = "rounded",
-        posiiton = "top",
-        row = 0,
+        -- position = "bottom",
+        row = 1000,
         -- title = "{title}",
         -- title_pos = "center",
-        { win = "input", height = 1, border = "none" },
         { win = "list", border = "none" },
-        { win = "preview", title = "{preview}", height = 0.4, border = "none" },
+        { win = "input", height = 1, border = "none" },
       }
 
     }

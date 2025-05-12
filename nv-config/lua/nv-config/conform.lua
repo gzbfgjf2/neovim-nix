@@ -1,4 +1,9 @@
 require("conform").setup({
+  formatters = {
+    nixfmt = {
+      prepend_args = { "--width=79" },
+    }
+  },
   formatters_by_ft = {
     -- lua = { "stylua" },
     lua = { lsp_format = "first" },
@@ -8,6 +13,7 @@ require("conform").setup({
     -- rust = { "rustfmt", lsp_format = "fallback" },
     -- Conform will run the first available formatter
     -- javascript = { "prettierd", "prettier", stop_after_first = true },
+    nix = { "nixfmt" }
   },
 })
 
